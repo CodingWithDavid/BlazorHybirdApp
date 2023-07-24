@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using BlazorHtbridApplication.Data;
+
+using BlazorHybridServiceLib;
 
 namespace BlazorHtbridApplication;
 
