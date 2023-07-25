@@ -4,11 +4,17 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHtbridApplication", "BlazorHtbridApplication\BlazorHtbridApplication.csproj", "{ADE76B3D-4CCF-4355-9E19-57316376C084}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlaozrServerApplication", "BlaozrServerApplication\BlaozrServerApplication.csproj", "{EC638C9B-391C-4166-B968-3E0584054A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlaozrServerApplication", "BlaozrServerApplication\BlaozrServerApplication.csproj", "{EC638C9B-391C-4166-B968-3E0584054A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridSharedUI", "BlazorHybridSharedUI\BlazorHybridSharedUI.csproj", "{F670952C-7606-4117-B4BF-0DD54279B8AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybridSharedUI", "BlazorHybridSharedUI\BlazorHybridSharedUI.csproj", "{F670952C-7606-4117-B4BF-0DD54279B8AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridServiceLib", "BlazorHybridServiceLib\BlazorHybridServiceLib.csproj", "{042215C6-BE87-4485-802B-6064EDE3B212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybridServiceLib", "BlazorHybridServiceLib\BlazorHybridServiceLib.csproj", "{042215C6-BE87-4485-802B-6064EDE3B212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridWAClient.Server", "BlazorHybridWAClient\Server\BlazorHybridWAClient.Server.csproj", "{6EB122B5-0F3D-4025-8D63-173C3A434D1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridWAClient.Client", "BlazorHybridWAClient\Client\BlazorHybridWAClient.Client.csproj", "{2D00DC09-45F2-4DA7-B500-71840A3E9066}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybridWebCleint.Shared", "..\..\..\Users\David\source\repos\BlazorHybridWebCleint\BlazorHybridWebCleint\Shared\BlazorHybridWebCleint.Shared.csproj", "{6732E398-DDEA-4DD8-8F6D-0130D8EA9971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,12 +40,24 @@ Global
 		{042215C6-BE87-4485-802B-6064EDE3B212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042215C6-BE87-4485-802B-6064EDE3B212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042215C6-BE87-4485-802B-6064EDE3B212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB122B5-0F3D-4025-8D63-173C3A434D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB122B5-0F3D-4025-8D63-173C3A434D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB122B5-0F3D-4025-8D63-173C3A434D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB122B5-0F3D-4025-8D63-173C3A434D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D00DC09-45F2-4DA7-B500-71840A3E9066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D00DC09-45F2-4DA7-B500-71840A3E9066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D00DC09-45F2-4DA7-B500-71840A3E9066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D00DC09-45F2-4DA7-B500-71840A3E9066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6732E398-DDEA-4DD8-8F6D-0130D8EA9971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6732E398-DDEA-4DD8-8F6D-0130D8EA9971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6732E398-DDEA-4DD8-8F6D-0130D8EA9971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6732E398-DDEA-4DD8-8F6D-0130D8EA9971}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 		SolutionGuid = {E550406A-E2BF-4DD8-8CA9-C49032823F34}
+		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 EndGlobal
