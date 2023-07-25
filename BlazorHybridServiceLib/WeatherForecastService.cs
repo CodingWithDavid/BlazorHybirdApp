@@ -25,23 +25,33 @@ namespace BlazorHybridServiceLib
             //from local
             if (hosted)
             {
-                HttpClient httpClient = new HttpClient();
-                var result =  await httpClient.GetFromJsonAsync<WeatherForecast[]>("https://localhost:7198/WeatherForecast");
-                if (result == null)
-                {
-                    result = new WeatherForecast[0];
-                }
-                return result;
+                return await APIManager();
             }
             else
-            { 
-                return await Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
-                {
-                    Date = DateOnly.FromDateTime(startDate.AddDays(index)),
-                    TemperatureC = Random.Shared.Next(-20, 55),
-                    Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-                }).ToArray());
+            {
+                return await GetLocalData(startDate);
             }
+        }
+
+        private async Task<WeatherForecast[]> GetLocalData(DateTime startDate)
+        {
+            return await Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(startDate.AddDays(index)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            }).ToArray());
+        }
+
+        private async Task<WeatherForecast[]> APIManager()
+        {
+            HttpClient httpClient = new();
+            var result = await httpClient.GetFromJsonAsync<WeatherForecast[]>("https://localhost:7198/WeatherForecast");
+            if (result == null)
+            {
+                result = Array.Empty<WeatherForecast>();
+            }
+            return result;
         }
     }
 }
