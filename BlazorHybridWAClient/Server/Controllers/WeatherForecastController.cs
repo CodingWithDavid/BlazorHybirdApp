@@ -1,5 +1,6 @@
 
 using BlazorHybridWebCleint.Shared;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorHybridWAClient.Server.Controllers
@@ -20,6 +21,7 @@ namespace BlazorHybridWAClient.Server.Controllers
             _logger = logger;
         }
 
+        [EnableCors("AllowOrigin")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
